@@ -22,7 +22,8 @@
       <p><a href="https://www.npmjs.org/package/enclave"><img src="https://img.shields.io/npm/v/enclave.svg?style=flat-square" alt="npm version"></a>
 <a href="https://enclave-cli.herokuapp.com/"><img src="http://enclave-cli.herokuapp.com/badge.svg" alt="Slack Status"></a>
 <a href="http://npm-stat.com/charts.html?package=enclave&amp;from=2016-03-01"><img src="https://img.shields.io/npm/dm/enclave.svg?style=flat-square" alt="npm downloads"></a>
-<a href="./LICENSE.md"><img src="http://img.shields.io/:license-mit-blue.svg?style=flat-square" alt="License"></a></p>
+<a href="./LICENSE.md"><img src="http://img.shields.io/:license-mit-blue.svg?style=flat-square" alt="License"></a>
+<a href="https://travis-ci.org/eanplatter/enclave"><img src="https://travis-ci.org/eanplatter/enclave.svg?branch=master" alt="Build Status"></a></p>
 
 <p align="center">
   <img alt="enclave" src="http://i1264.photobucket.com/albums/jj488/eanplatter1/enclave-logo_zpslmhskufg.png" width="546">
@@ -48,6 +49,18 @@
 <p>Primarily for those who don't want to go through the hassle of setting up a React project but who still want to flexibility that a starter kit can't provide.</p>
 
 <h2>
+<a id="ok-but-what-if-my-app-outgrows-enclave" class="anchor" href="#ok-but-what-if-my-app-outgrows-enclave" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Ok, but what if my app outgrows enclave?</h2>
+
+<p>If you find for whatever reason that enclave's management of your webpack and babel dependencies is not offering enough customization for you, merely run:</p>
+
+<pre><code>$ npm run enclave-eject
+</code></pre>
+
+<p>The <code>enclave-eject</code> command transfers enclave's webpack configuration files to your app's root, and installs the dependencies you need in your app for you.</p>
+
+<p>After executing the eject command, <code>$ npm run serve</code> will compile and serve your code, just like before, sans enclave.</p>
+
+<h2>
 <a id="philosophy" class="anchor" href="#philosophy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Philosophy</h2>
 
 <p>This project comes from a combination of two things, a complexity of configuring React applications with Webpack and Babel (especially for beginners), and my experience with compile-to-JavaScript languages, like Elm or CoffeeScript.</p>
@@ -67,7 +80,7 @@
 <a id="short-version" class="anchor" href="#short-version" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Short Version:</h3>
 
 <pre><code>$ npm i enclave -S
-$ npm start
+$ npm run enclave-serve
 </code></pre>
 
 <h3>
@@ -126,7 +139,7 @@ $ npm install enclave --save
 <p>Enclave will <em>automagically</em> add a script to your <code>package.json</code> file which will allow you to run everything.
 To run it, type the following in your terminal:</p>
 
-<pre><code>$ npm start
+<pre><code>$ npm run enclave-serve
 </code></pre>
 
 <blockquote>
@@ -160,6 +173,15 @@ To run it, type the following in your terminal:</p>
 <span class="pl-c1">exports</span>.<span class="pl-c1">port</span> <span class="pl-k">=</span> <span class="pl-c1">3000</span>
 <span class="pl-c1">exports</span>.<span class="pl-c1">index</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>src/index.html<span class="pl-pds">"</span></span>
 <span class="pl-c1">exports</span>.<span class="pl-smi">live</span> <span class="pl-k">=</span> <span class="pl-c1">true</span></pre></div>
+
+<h2>
+<a id="issues" class="anchor" href="#issues" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Issues</h2>
+
+<p>In the spirit of making enclave more accessible to developers who are new to open source, we decided that we would turn off the issue feature on GitHub. In place of issues, we are inviting anyone with a bug / feature idea / api change or whatever else to create a pull request that exposes the bug or shows how you might add a feature.</p>
+
+<p>Honestly, we'd rather see a poorly written PR than an issue. Take a shot in the dark if you must! Features, bugs and api changes are easier to discuss around a pull request than an issue.</p>
+
+<p>Ridding ourselves of issues also tightens our community. No more side-line issue makers and small team of PR doers. For more information about making a PR see the <a href="./CONTRIBUTING.md">contributing</a> guide.</p>
 
 <h2>
 <a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h2>
